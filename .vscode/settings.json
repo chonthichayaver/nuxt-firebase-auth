@@ -1,0 +1,10 @@
+{
+	"workbench.colorCustomizations": {
+		"activityBar.background": "#5C0F0E",
+		"titleBar.activeBackground": "#811514",
+		"titleBar.activeForeground": "#FEFBFB"
+	},
+	"java.completion.enabled": false,
+	"java.debug.settings.enableRunDebugCodeLens": false,
+	"java.test.editor.enableShortcuts": false
+}
