@@ -43,7 +43,7 @@
               <v-list>
                 <v-list-tile avatar>
                   <v-list-tile-avatar>
-                    <img :src="$store.state.user.photoURL" alt="John">
+                    <img :src="$store.state.user.photoURL" :alt="$store.state.user.displayName">
                   </v-list-tile-avatar>
                   <v-list-tile-content>
                     <v-list-tile-title v-if="user.displayName">{{user.displayName}}</v-list-tile-title>
@@ -90,7 +90,8 @@ export default {
       items: [
         { icon: 'home', title: 'Welcome', to: '/' },
         { icon: 'info', title: 'About', to: '/about' },
-        { icon: 'person', title: 'Admin', to: '/admin' }
+        { icon: 'person', title: 'Admin', to: '/admin' },
+        { icon: 'money', title: 'Currencies', to: '/currencies' }
         // { icon: 'store', title: 'FireStore', to: '/firestore' }
       ],
       title: 'Nuxt Firebase Auth',
@@ -137,4 +138,27 @@ a.nuxt-link-exact-active.list__tile--active.list__tile.list__tile--link {
   border-left: 10px solid gray;
 }
 
+.w-49 {
+  width: 49%;
+}
+
+.w-2 {
+  width: 2%;
+}
+
+.t-r {
+  text-align: right;
+  padding-right: auto;
+}
+
+.t-l {
+  text-align: left;
+  padding-left: auto;
+}
+
+.t-c {
+  text-align: center;
+  padding-right: auto;
+  padding-left: auto;
+}
 </style>

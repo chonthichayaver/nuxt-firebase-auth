@@ -1,6 +1,6 @@
-import * as firebase from 'firebase/app'
-import 'firebase/auth'
-import 'firebase/database'
+import { getApps, initializeApp, getApp } from 'firebase/app';
+import { getAuth, GoogleAuthProvider } from 'firebase/auth';
+import { getDatabase } from 'firebase/database';
 
 var config = {
     apiKey: 'AIzaSyDcPP--N0QLnWH56rwhY8Ug1RG42q7-8E0',
@@ -13,8 +13,8 @@ var config = {
     measurementId: 'G-V613BXG5CV'
 };
 
-!firebase.apps.length ? firebase.initializeApp(config) : ''
-export const GoogleProvider = new firebase.auth.GoogleAuthProvider();
-export const auth = firebase.auth();
-export const DB = firebase.database();
-export default firebase
+const app = !getApps().length ? initializeApp(config) : getApp();
+export const auth = getAuth(app);
+export const GoogleProvider = new GoogleAuthProvider();
+export const DB = getDatabase(app);
+export default app;

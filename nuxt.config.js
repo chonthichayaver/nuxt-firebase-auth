@@ -33,10 +33,14 @@ module.exports = {
         '@nuxtjs/pwa'
     ],
     router: {
-        middleware: 'router-auth'
+        middleware: [
+            'router-auth',
+            'admin-auth'
+        ]
     },
     plugins: [
         { src: '~/plugins/vuetify.js' },
+        { src: '~/plugins/fireinit.js' },
         { src: '~/plugins/fireauth.js' }
     ],
     css: [

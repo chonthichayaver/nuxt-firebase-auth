@@ -11,7 +11,7 @@
         <v-list>
           <v-list-tile avatar>
             <v-list-tile-avatar>
-              <img v-if="user.displayName" :src="$store.state.user.photoURL" alt="John">
+              <img v-if="user.displayName" :src="$store.state.user.photoURL" :alt="$store.state.user.displayName">
             </v-list-tile-avatar>
             <v-list-tile-content>
               <v-list-tile-title v-if="user.displayName">{{user.displayName}}</v-list-tile-title>
